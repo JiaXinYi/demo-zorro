@@ -1,0 +1,80 @@
+<nz-layout class="layout">
+  <nz-header>
+    <img src="../../assets/icon/logo-green.png" alt="LOGO" class="logo">
+    <!-- <h2>移动端后台管理系统</h2> -->
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="'horizontal'" class="header-nav">
+      <li nz-menu-item>主页
+        <i class="anticon anticon-home"></i>
+      </li>
+      <li nz-menu-item>分析
+        <i class="anticon anticon-bar-chart"></i>
+      </li>
+      <li nz-menu-item>下载
+        <i class="anticon anticon-download"></i>
+      </li>
+      <li nz-menu-item>喜欢
+        <i class="anticon anticon-heart-o"></i>
+      </li>
+    </ul>
+
+    <div class="search-bar">
+      <nz-input [nzType]="'search'" [nzPlaceHolder]="'input search text'"></nz-input>
+    </div>
+    <div class="icon-bar">
+      <nz-badge [nzCount]="5" class="icon-btn">
+        <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+      </nz-badge>
+      <nz-badge [nzCount]="5" class="icon-btn">
+        <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+      </nz-badge>
+      <nz-badge [nzCount]="5" class="icon-btn">
+        <nz-avatar nzIcon="user" [nzShape]="'square'"></nz-avatar>
+      </nz-badge>
+    </div>
+
+  </nz-header>
+  <nz-layout class="layout">
+    <nz-sider [nzWidth]="180" class="sider">
+      <ul nz-menu [nzTheme]="'light'" [nzMode]="'inline'" class="nav-bar">
+        <li nz-submenu>
+          <span title>
+            <i class="anticon anticon-user"></i>subnav 1</span>
+          <ul>
+            <li nz-menu-item>option1</li>
+            <li nz-menu-item>option2</li>
+            <li nz-menu-item>option3</li>
+            <li nz-menu-item>option4</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i class="anticon anticon-laptop"></i>subnav 2</span>
+          <ul>
+            <li nz-menu-item>option5</li>
+            <li nz-menu-item>option6</li>
+            <li nz-menu-item>option7</li>
+            <li nz-menu-item>option8</li>
+          </ul>
+        </li>
+        <li nz-submenu>
+          <span title>
+            <i class="anticon anticon-notification"></i>subnav 3</span>
+          <ul>
+            <li nz-menu-item>option9</li>
+            <li nz-menu-item>option10</li>
+            <li nz-menu-item>option11</li>
+            <li nz-menu-item>option12</li>
+          </ul>
+        </li>
+      </ul>
+    </nz-sider>
+    <nz-content class="content">
+
+    </nz-content>
+  </nz-layout>
+
+
+  <nz-footer>
+
+  </nz-footer>
+</nz-layout>

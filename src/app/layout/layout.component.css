@@ -1,0 +1,55 @@
+.layout {
+  background-color: #fff;
+  height: 100%;
+}
+
+.ant-layout-header {
+  padding: 0;
+  height: 64px;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  margin: -20px 40px 0 40px;
+  float: left;
+}
+
+.header-nav {
+  line-height: 64px;
+  height: 64px;
+  float: left;
+}
+
+.header-nav li {
+  width: 80px;
+}
+
+.search-bar {
+  width: 320px;
+  float: left;
+  margin: 0 40px;
+}
+
+.icon-bar {
+  float: right;
+}
+
+.icon-bar .icon-btn {
+  /* display: inline-block;/ */
+  margin-right: 20px;
+}
+
+.sider {
+  /* background: rgb(105, 155, 184); */
+  height: 100%;
+}
+
+.nav-bar {
+  height: 100%;
+}
+
+.content {
+  padding: 24px;
+  min-height: 280px;
+}

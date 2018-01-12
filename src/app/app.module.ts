@@ -6,13 +6,19 @@ import { AppComponent } from './app.component';
 import { LayoutComponent } from './layout/layout.component';
 
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './login/login.component';
+
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent
+    LayoutComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
+    FormsModule, ReactiveFormsModule,
+
     NgZorroAntdModule.forRoot({ extraFontName: 'anticon', extraFontUrl: './assets/fonts/iconfont' })
   ],
   providers: [],

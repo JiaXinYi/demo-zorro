@@ -19,6 +19,7 @@
   line-height: 64px;
   height: 64px;
   float: left;
+  /* font-weight: 400; */
 }
 
 .header-nav li {
@@ -52,4 +53,17 @@
 .content {
   padding: 24px;
   min-height: 280px;
+  /* bottom: 64px; */
+}
+
+.content .login-form {
+  max-width: 300px;
+}
+
+.content .login-form-forgot {
+  float: right;
+}
+
+.content .login-form-button {
+  width: 100%;
 }

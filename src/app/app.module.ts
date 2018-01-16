@@ -14,13 +14,19 @@ import { LayoutComponent } from './layout/layout.component';
 
 import { LoginComponent } from './login/login.component';
 import { FormComponent } from './form/form.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { EditorComponent } from './editor/editor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LayoutComponent,
     LoginComponent,
-    FormComponent
+    FormComponent,
+    DashboardComponent,
+    PageNotFoundComponent,
+    EditorComponent
   ],
   imports: [
     BrowserModule,

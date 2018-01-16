@@ -18,12 +18,13 @@ export class LoginComponent implements OnInit {
 
   _submitForm() {
     for (const i in this.validateForm.controls) {
-      this.validateForm.controls[ i ].markAsDirty();
+      this.validateForm.controls[i].markAsDirty();
     }
     if (this.validateForm.valid) {
       console.log('Valid!');
       console.log(this.validateForm.value);
-      this.router.navigate(['form']);
+      //页面跳转
+      this.router.navigate(['layout']);
     }
   }
 
@@ -32,9 +33,9 @@ export class LoginComponent implements OnInit {
 
   ngOnInit() {
     this.validateForm = this.fb.group({
-      userName: [ null, [ Validators.required ] ],
-      password: [ null, [ Validators.required ] ],
-      remember: [ true ],
+      userName: [null, [Validators.required]],
+      password: [null, [Validators.required]],
+      remember: [true],
     });
   }
 }

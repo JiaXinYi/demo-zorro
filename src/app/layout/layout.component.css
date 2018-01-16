@@ -1,4 +1,4 @@
-.layout {
+/* .layout {
   background-color: #fff;
   height: 100%;
 }
@@ -19,7 +19,7 @@
   line-height: 64px;
   height: 64px;
   float: left;
-  /* font-weight: 400; */
+  font-weight: 400;
 }
 
 .header-nav li {
@@ -42,7 +42,7 @@
 }
 
 .sider {
-  /* background: rgb(105, 155, 184); */
+  background: rgb(105, 155, 184);
   height: 100%;
 }
 
@@ -55,4 +55,59 @@
   background: #fff;
   min-height: 750px;
   min-width: 800px
+} */
+
+.layout {
+  background-color: #fff;
+  height: 100%;
+}
+.search-bar{
+  float: right;
+  margin-right: 16px;
+  width: 210px;
+}
+:host ::ng-deep .ant-menu-submenu-title{
+  padding-left:0 !important;
+}
+:host ::ng-deep .logo-div {
+  height: 32px;
+  background-color: #fff;
+  border-radius: 6px;
+  margin: 16px;
+}
+:host ::ng-deep .logo {
+  width: 32px;
+  height: 32px;
+  vertical-align: middle;
+}
+:host ::ng-deep .logo-text {
+  vertical-align: middle
+}
+:host ::ng-deep .ant-layout-sider-collapsed .logo-text {
+  display: none;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .nav-text {
+  display: none;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .ant-menu-submenu-title:after {
+  display: none;
+}
+
+:host ::ng-deep .ant-layout-sider-collapsed .anticon {
+  font-size: 16px;
+  margin-left: 8px;
+}
+
+:host ::ng-deep .trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 16px;
+  cursor: pointer;
+  transition: color .3s;
+}
+
+:host ::ng-deep .trigger:hover {
+  color: #108ee9;
 }

@@ -1,4 +1,4 @@
-<nz-layout class="layout">
+<!-- <nz-layout class="layout">
     <nz-sider  nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null" class="sider">
         <img src="../../assets/icon/logo-green.png" alt="LOGO" class="logo">
         <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'" class="nav-bar">
@@ -38,8 +38,8 @@
   <nz-layout class="layout">
         <nz-header style="background: #fff; padding:0;">
             <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed" style="float:left;line-height:64px;margin:0 10px;"></i>
-            <!-- <img src="../../assets/icon/logo-green.png" alt="LOGO" class="logo">
-            <h2>移动端后台管理系统</h2> -->
+            <img src="../../assets/icon/logo-green.png" alt="LOGO" class="logo">
+            <h2>移动端后台管理系统</h2>
             <ul nz-menu [nzTheme]="'light'" [nzMode]="'horizontal'" class="header-nav">
               <li nz-menu-item>主页
                 <i class="anticon anticon-home"></i>
@@ -74,5 +74,52 @@
     <nz-footer>
         jiaxin@2018
       </nz-footer>
+  </nz-layout>
+</nz-layout> -->
+
+<nz-layout class="layout">
+  <nz-sider nzCollapsible [(nzCollapsed)]="isCollapsed" [nzTrigger]="null">
+    <div class="logo-div">
+      <img src="../../assets/icon/logo-green.png" alt="" class="logo">
+      <span class="logo-text">后台管理系统</span>
+    </div>
+    <ul nz-menu [nzTheme]="'dark'" [nzMode]="isCollapsed?'vertical':'inline'" *ngFor="let child of menu">
+      <li nz-menu-item [routerLink]="child.link" *ngIf="!child.children" [nzSelected]="child.selected">
+        <span>
+          <i class="anticon {{child.icon}}"></i>
+          <span class="nav-text">{{child.text}}</span>
+        </span>
+      </li>
+      <li nz-submenu *ngIf="child.children" [nzOpen]="child.selected" >
+        <span title>
+          <i class="anticon {{child.icon}}"></i>
+          <span class="nav-text">{{child.text}}</span>
+        </span>
+        <ul *ngFor="let item of child.children">
+          <li nz-menu-item  [routerLink]="item.link" [nzSelected]="item.selected" >{{item.text}}</li>
+        </ul>
+      </li>
+    </ul>
+  </nz-sider>
+  <nz-layout>
+    <nz-header style="background: #fff; padding:0;">
+      
+      <i class="anticon trigger" [class.anticon-menu-fold]="!isCollapsed" [class.anticon-menu-unfold]="isCollapsed" (click)="isCollapsed=!isCollapsed"></i>
+      <div class="search-bar">
+          <nz-input [nzType]="'search'" [nzPlaceHolder]="'input search text'"></nz-input>
+      </div>
+      
+    </nz-header>
+    <nz-content style="margin:0 16px;">
+      <nz-breadcrumb style="margin:12px 0;">
+        <nz-breadcrumb-item>*</nz-breadcrumb-item>
+        <nz-breadcrumb-item>form</nz-breadcrumb-item>
+      </nz-breadcrumb>
+
+      <div style="padding:24px; background: #fff; min-height: 420px;">
+        <router-outlet></router-outlet>
+      </div>
+    </nz-content>
+    <nz-footer style="text-align: center;max-height:64px;">jiaxin@2018</nz-footer>
   </nz-layout>
 </nz-layout>
